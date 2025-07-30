@@ -1,4 +1,4 @@
-name: hello-world
+name: Deploy to GitHub Pages
 on: push
 jobs: 
   build:
@@ -31,7 +31,7 @@ jobs:
       pages: write     
       id-token: write
     environment:
-      name: production
+      name:  github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
